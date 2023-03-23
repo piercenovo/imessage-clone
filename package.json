@@ -1,0 +1,27 @@
+{
+  "name": "imessage-clone",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "app": "pnpm --filter app dev",
+    "api": "pnpm --filter api dev",
+    "comm": "sui-mono commit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@s-ui/mono": "2.34.0",
+    "concurrently": "7.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.0",
+    "standard": "17.0.0",
+    "ts-standard": "12.0.2",
+    "typescript": "5.0.2"
+  }
+}
