@@ -1,3 +1,5 @@
+import { theme } from '@/chakra/theme'
+import { ChakraProvider } from '@chakra-ui/react'
 import { SessionProvider } from 'next-auth/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -12,7 +14,9 @@ export default function App ({ Component, pageProps: { session, ...pageProps } }
         <link rel='icon' href='/favicons/favicon.ico' />
       </Head>
       <SessionProvider session={session}>
-        <Component {...pageProps} />
+        <ChakraProvider theme={theme}>
+          <Component {...pageProps} />
+        </ChakraProvider>
       </SessionProvider>
     </>
   )
