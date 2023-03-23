@@ -1,14 +1,10 @@
 {
   "extends": [
-      "./node_modules/standard/eslintrc.json",
-      "./node_modules/ts-standard/eslintrc.json"
+      "./node_modules/standard/eslintrc.json"
     ],
     "parserOptions": {
       "project": [
           "./app/tsconfig.json"
       ]
-  },
-  "rules": {
-    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
