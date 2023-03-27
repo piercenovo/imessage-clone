@@ -1,7 +1,7 @@
 import { Auth } from '@/components/Auth/Auth'
 import { Chat } from '@/components/Chat/Chat'
 import { Box } from '@chakra-ui/react'
-import { NextPageContext } from 'next'
+import { type NextPageContext } from 'next'
 import { getSession, useSession } from 'next-auth/react'
 
 export default function Home () {

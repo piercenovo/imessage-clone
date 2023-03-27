@@ -1,10 +1,36 @@
 {
-  "extends": [
-      "./node_modules/standard/eslintrc.json"
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:react/recommended",
+        "standard-with-typescript"
+    ],
+    "overrides": [
     ],
     "parserOptions": {
-      "project": [
-          "./app/tsconfig.json"
-      ]
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/triple-slash-reference": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+    }
   }
-}
+  

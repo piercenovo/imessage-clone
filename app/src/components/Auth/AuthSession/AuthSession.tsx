@@ -1,5 +1,5 @@
 import { Button, Image, Input, Text } from '@chakra-ui/react'
-import { Session } from 'next-auth'
+import { type Session } from 'next-auth'
 import { signIn } from 'next-auth/react'
 import React, { useState } from 'react'
 
@@ -23,7 +23,7 @@ const Authenticated = () => {
       <Input
         placeholder='Ingresa un nombre de usuario'
         value={username}
-        onChange={(event) => setUsername(event.target.value)}
+        onChange={(event) => { setUsername(event.target.value) }}
       />
       <Button width='100%' onClick={onSubmit}>Guardar</Button>
     </>
@@ -35,7 +35,7 @@ const NotAuthenticated = () => {
     <>
       <Text fontSize='3xl'>iMessage</Text>
       <Button
-        onClick={() => signIn('google')}
+        onClick={async () => await signIn('google')}
         leftIcon={<Image height='20px' src='/images/google-logo.png' alt='Logo de Google' />}
       >Continúa con Google
       </Button>

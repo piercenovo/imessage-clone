@@ -1,5 +1,5 @@
 import { Center, Stack } from '@chakra-ui/react'
-import { Session } from 'next-auth'
+import { type Session } from 'next-auth'
 import React from 'react'
 import { AuthSession } from './AuthSession/AuthSession'
 

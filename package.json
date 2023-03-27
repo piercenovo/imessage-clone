@@ -4,11 +4,11 @@
   "main": "index.js",
   "private": true,
   "workspaces": [
-    "api",
     "app"
   ],
   "scripts": {
-    "app": "yarn workspace app dev",
+    "dev:app": "yarn workspace app dev",
+    "build:app": "yarn workspace app build",
     "comm": "sui-mono commit"
   },
   "keywords": [],
@@ -16,12 +16,19 @@
   "license": "ISC",
   "devDependencies": {
     "@s-ui/mono": "2.34.0",
-    "concurrently": "7.6.0",
+    "@types/node": "18.15.10",
+    "@typescript-eslint/eslint-plugin": "5.57.0",
+    "@typescript-eslint/parser": "5.57.0",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-standard-with-typescript": "34.0.1",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.32.2",
     "husky": "8.0.3",
     "lint-staged": "13.2.0",
     "prisma": "4.11.0",
-    "standard": "17.0.0",
-    "ts-standard": "12.0.2",
-    "typescript": "5.0.2"
+    "typescript": "4.9.5"
   }
 }
